@@ -5,6 +5,7 @@ import { BrandLogo } from '../common/BrandLogo'
 import { siteNavLinks } from '../../data/navigation'
 import { contactInfo } from '../../data/contact'
 import { gradientGold } from '../../styles/colors'
+import { CartButton } from '../cart/CartButton'
 
 type AppSidebarProps = {
   variant: 'docked' | 'drawer'
@@ -104,10 +105,11 @@ export function AppSidebar({ variant, isOpen = false, isClosing = false, onClose
         aria-label="Site navigation"
       >
         <div className="app-sidebar-glow pointer-events-none absolute inset-0" aria-hidden="true" />
-        <div className="relative flex items-center border-b border-brand-teal/10 px-5 py-5">
+        <div className="relative flex items-center justify-between gap-2 border-b border-brand-teal/10 px-5 py-5">
           <Link to="/" className="transition-transform duration-300 hover:scale-[1.02]">
             <BrandLogo size="md" />
           </Link>
+          <CartButton className="border-brand-gold/35 hover:border-brand-gold" />
         </div>
         <SidebarNav />
       </aside>

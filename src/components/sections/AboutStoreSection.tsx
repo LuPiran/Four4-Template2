@@ -84,14 +84,14 @@ export function AboutStoreSection() {
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
           <ScrollReveal className="text-center" animation="blur">
             <span className="section-kicker">Our lines</span>
-            <h3 className="section-title">Eight colors, eight purposes</h3>
+            <h3 className="section-title">Six colors, six purposes</h3>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-brand-teal/60">
               Each Polisupport line has a visual identity and a clear benefit — choose the color that
               matches your moment.
             </p>
           </ScrollReveal>
 
-          <div className="mt-10 grid grid-cols-2 items-stretch gap-3 md:grid-cols-4 xl:grid-cols-8">
+          <div className="mt-10 grid grid-cols-2 items-stretch gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {brandLineShowcase.map((line, index) => (
               <ScrollReveal key={line.line} delay={index * 60} animation="scale" className="h-full">
                 <div className="brand-line-card group flex h-full flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
